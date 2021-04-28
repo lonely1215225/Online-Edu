@@ -13,9 +13,7 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0aae9b4f-c0f4-49f8-80eb-483a4867eca2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0aae9b4f-c0f4-49f8-80eb-483a4867eca2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +197,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -455,7 +453,7 @@
       <workItem from="1618921395373" duration="2958000" />
       <workItem from="1619082474973" duration="5832000" />
       <workItem from="1619326021215" duration="1561000" />
-      <workItem from="1619591211808" duration="2225000" />
+      <workItem from="1619591211808" duration="2474000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1597929729238</created>
