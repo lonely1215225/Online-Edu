@@ -33,7 +33,7 @@ import java.util.List;
 @Api(description = "添加课程信息")
 @RestController
 @RequestMapping("/eduservice/course")
-@CrossOrigin
+//@CrossOrigin
 public class EduCourseController {
     @Autowired
     private EduCourseService eduCourseService;
@@ -46,7 +46,7 @@ public class EduCourseController {
 
     @PostMapping("addCourseInfo")
     public R addCourseInfo(@RequestBody CourseInfoVo courseInfoVo) {
-//        System.out.println("11111111111");
+        System.out.println("添加课程！！！！！添加课程！！");
         String id = eduCourseService.saveCourseInfo(courseInfoVo);
         return R.ok().data("courseId", id);
     }

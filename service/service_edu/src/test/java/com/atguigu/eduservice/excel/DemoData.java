@@ -1,7 +1,9 @@
 package com.atguigu.eduservice.excel;
 
 import com.alibaba.excel.annotation.ExcelProperty;
+import com.atguigu.serviceedu.entity.vo.CourseQuery;
 import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
 @Data
 public class DemoData {

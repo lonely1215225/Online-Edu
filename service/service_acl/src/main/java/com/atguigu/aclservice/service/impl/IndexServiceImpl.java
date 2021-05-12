@@ -56,7 +56,7 @@ public class IndexServiceImpl implements IndexService {
         List<String> permissionValueList = permissionService.selectPermissionValueByUserId(user.getId());
         redisTemplate.opsForValue().set(username, permissionValueList);
 
-        result.put("name", user.getUsername());
+        result.put("name", user.getNickName());
         result.put("avatar", "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
         result.put("roles", roleNameList);
         result.put("permissionValueList", permissionValueList);

@@ -18,7 +18,7 @@ public class ScheduleTask {
     public void task1() {
         //DateUtil工具类生成前一天时间
         String day = DateUtil.formatDate(DateUtil.addDays(new Date(), -1));
-        statisticsDailyService.countRegister(day);
+        statisticsDailyService.countSta(day);
     }
 
 

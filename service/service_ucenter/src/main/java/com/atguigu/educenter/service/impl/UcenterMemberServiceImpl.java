@@ -48,6 +48,7 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
             throw new GuliException(20001,"手机号不存在");
         }
 
+        baseMapper.updateById(mobileMember);
         //判断密码是否相等
         //数据库密码进行加密，不能直接对比
         //MD5对密码进行加密，再与数据库进行比较
@@ -102,12 +103,12 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         ucenterMember.setPassword(MD5.encrypt(password));
         ucenterMember.setNickname(nickname);
         ucenterMember.setIsDisabled(false);//用户不禁用
-        ucenterMember.setAvatar("https://edu-longyang.oss-cn-beijing.aliyuncs.com/fa104ef58c4e5bc4270d911da1d1b34d.jpg");
+        ucenterMember.setAvatar("https://taichiman.oss-cn-beijing.aliyuncs.com/2021/04/28/2F28AF069408339B36737DF3277A592F.jpg");
         baseMapper.insert(ucenterMember);
     }
 
     @Override
-    public UcenterMember getMenberByOperid(String openid) {
+    public UcenterMember getMemberByOpenid(String openid) {
         QueryWrapper<UcenterMember> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("openid",openid);
         UcenterMember member = baseMapper.selectOne(queryWrapper);
@@ -115,7 +116,12 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
     }
 
     @Override
-    public Integer ucenterMemberService(String day) {
+    public Integer uCenterMemberService(String day) {
         return baseMapper.ucenterMemberService(day);
+    }
+
+    @Override
+    public Integer countLoginMembers(String day) {
+        return baseMapper.countLoginMemberService(day);
     }
 }

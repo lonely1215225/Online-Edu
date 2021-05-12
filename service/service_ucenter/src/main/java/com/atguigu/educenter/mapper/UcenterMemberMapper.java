@@ -18,4 +18,6 @@ import org.mybatis.spring.annotation.MapperScan;
 public interface UcenterMemberMapper extends BaseMapper<UcenterMember> {
 
     Integer ucenterMemberService(String day);
+
+    Integer countLoginMemberService(String day);
 }

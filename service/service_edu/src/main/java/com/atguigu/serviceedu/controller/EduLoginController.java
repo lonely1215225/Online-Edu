@@ -5,13 +5,18 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/eduservice/user")
-@CrossOrigin
+//@CrossOrigin
 public class EduLoginController {
 
     //Login
     @PostMapping("login")
     public R login() {
         return R.ok().data("token", "admin");
+    }  //Login
+
+    @RequestMapping("hello")
+    public String test() {
+        return "hello world";
     }
 
     //info

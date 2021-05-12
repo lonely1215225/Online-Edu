@@ -106,9 +106,8 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
             client.post();
             //3、返回第三方的数据
             String xml = client.getContent();
-            Map<String, String> resultmap = WXPayUtil.xmlToMap(xml);
 
-            return resultmap;
+            return WXPayUtil.xmlToMap(xml);
         } catch (Exception e) {
             e.printStackTrace();
         }

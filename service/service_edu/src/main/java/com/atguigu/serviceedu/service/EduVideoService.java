@@ -17,4 +17,5 @@ public interface EduVideoService extends IService<EduVideo> {
 
     void removeByCourseId(String courseId);
 
+    void updateSpecialColumn(EduVideo eduVideo);
 }

@@ -37,11 +37,8 @@ public class VodServiceImpl implements VodService {
             UploadStreamResponse response = uploader.uploadStream(request);
 
             String videoId = null;
-            if (response.isSuccess()) {
-                videoId = response.getVideoId();
-            } else { //如果设置回调URL无效，不影响视频上传，可以返回VideoId同时会返回错误码。其他情况上传失败时，VideoId为空，此时需要根据返回错误码分析具体错误原因
-                videoId = response.getVideoId();
-            }
+            videoId = response.getVideoId();
+
             return videoId;
         } catch (Exception e) {
             e.printStackTrace();

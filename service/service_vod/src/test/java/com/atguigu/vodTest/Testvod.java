@@ -1,5 +1,6 @@
 package com.atguigu.vodTest;
 
+
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadVideoRequest;
 import com.aliyun.vod.upload.resp.UploadVideoResponse;
@@ -11,17 +12,17 @@ import java.util.List;
 
 public class Testvod {
     public static void main(String[] args) throws Exception {
-//        String accessKeyId = "LTAI4GJ6aa5zmUTuAMmteoss";
-//        String accessKeySecret = "53eD9YFsPyTEHxBLxgpyB1mDY4ChHD";
+//        String accessKeyId = "LTAI5tNxe19kcidoBN2sftWS";
+//        String accessKeySecret = "t9CWdcbyMrrbrFWcaU0NtBrmhBfT8a";
 //
-//        String title = "6- What If I Want to Move Faster - upload by sdk";   //上传之后文件名称
-//        String fileName = "D:/6 - What If I Want to Move Faster.mp4";  //本地文件路径和名称
+//        String title = "测试讯飞音乐节视频.mp4";   //上传之后文件名称
+//        String fileName = "/Users/taichiman/62E7CF4C8C5FD64E930E6004C338C62F.mp4";  //本地文件路径和名称
 //        //上传视频的方法
 //        UploadVideoRequest request = new UploadVideoRequest(accessKeyId, accessKeySecret, title, fileName);
 //        /* 可指定分片上传时每个分片的大小，默认为2M字节 */
-//        request.setPartSize(2 * 1024 * 1024L);
+//        request.setPartSize(5 * 1024 * 1024L);
 //        /* 可指定分片上传时的并发线程数，默认为1，(注：该配置会占用服务器CPU资源，需根据服务器情况指定）*/
-//        request.setTaskNum(1);
+//        request.setTaskNum(Runtime.getRuntime().availableProcessors()<<1);
 //
 //        UploadVideoImpl uploader = new UploadVideoImpl();
 //        UploadVideoResponse response = uploader.uploadVideo(request);
@@ -34,33 +35,35 @@ public class Testvod {
 //            System.out.print("ErrorCode=" + response.getCode() + "\n");
 //            System.out.print("ErrorMessage=" + response.getMessage() + "\n");
 //        }
-        getPlayAuth();
+//        getPlayAuth();
+//        getPlayUrl();
+
     }
     //1 根据视频iD获取视频播放凭证
     public static void getPlayAuth() throws Exception {
 
-        DefaultAcsClient client = AliyunVodSDKUtils.initVodClient("LTAI4GJ6aa5zmUTuAMmteoss", "53eD9YFsPyTEHxBLxgpyB1mDY4ChHD");
+        DefaultAcsClient client = AliyunVodSDKUtils.initVodClient("LTAI5tNxe19kcidoBN2sftWS", "t9CWdcbyMrrbrFWcaU0NtBrmhBfT8a");
 
         GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
-        GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
+//        GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
 
-        request.setVideoId("ffb8a154ffa7418cbbb44d97370fd257");
+        request.setVideoId("3eaab5662f184f068b76f3b1f95a5ea0");
 
-        response = client.getAcsResponse(request);
+        GetVideoPlayAuthResponse response = client.getAcsResponse(request);
         System.out.println("playAuth:" + response.getPlayAuth());
     }
 
 
-    public void getPlayUrl() throws ClientException {
+    public static void getPlayUrl() throws ClientException {
         //创建初始化对象
-        DefaultAcsClient client = AliyunVodSDKUtils.initVodClient("LTAI4GJ6aa5zmUTuAMmteoss", "53eD9YFsPyTEHxBLxgpyB1mDY4ChHD");
+        DefaultAcsClient client = AliyunVodSDKUtils.initVodClient("LTAI5tNxe19kcidoBN2sftWS", "t9CWdcbyMrrbrFWcaU0NtBrmhBfT8a");
         //创建获取视频地址request和response
         GetPlayInfoRequest request = new GetPlayInfoRequest();
-        GetPlayInfoResponse response = new GetPlayInfoResponse();
+//        GetPlayInfoResponse response = new GetPlayInfoResponse();
         //向request对象里面设置视频id
-        request.setVideoId("fedcdb5027c5428ba29b93f7ef7c7a93");
+        request.setVideoId("3eaab5662f184f068b76f3b1f95a5ea0");
         //调用初始化对象里面的方法，传递request，获取数据
-        response = client.getAcsResponse(request);
+        GetPlayInfoResponse response = client.getAcsResponse(request);
 
         List<GetPlayInfoResponse.PlayInfo> playInfoList = response.getPlayInfoList();
         //播放地址

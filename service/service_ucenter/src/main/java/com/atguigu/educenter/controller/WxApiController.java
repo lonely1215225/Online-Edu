@@ -12,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
@@ -21,7 +20,7 @@ import java.util.HashMap;
 
 @Controller//只请求地址，不返回数据
 @RequestMapping("/api/ucenter/wx")
-@CrossOrigin
+//@CrossOrigin
 public class WxApiController {
     @Autowired
     private UcenterMemberService ucenterMemberService;
@@ -56,7 +55,7 @@ public class WxApiController {
 
 
             //判断该微信信息是否注册过
-            UcenterMember menber = ucenterMemberService.getMenberByOperid(openid);
+            UcenterMember menber = ucenterMemberService.getMemberByOpenid(openid);
             if (menber == null){
                 //3\拿着access_token和openid，再去请求微信提供的固定地址，获取扫描人信息
                 //访问微信的资源服务器，获取用户信息

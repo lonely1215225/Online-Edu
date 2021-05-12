@@ -3,6 +3,13 @@
 <mapper namespace="com.atguigu.educenter.mapper.UcenterMemberMapper">
 
     <select id="ucenterMemberService" resultType="java.lang.Integer">
-        SELECT count(*) from ucenter_member where date(gmt_create)=#{day};
+        SELECT count(*)
+        from ucenter_member
+        where date (gmt_create)=#{day};
+    </select>
+    <select id="countLoginMemberService" resultType="java.lang.Integer">
+        SELECT count(*)
+        from ucenter_member
+        where date (gmt_modified)=#{day};
     </select>
 </mapper>

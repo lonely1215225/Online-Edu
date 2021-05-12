@@ -5,6 +5,7 @@ import com.atguigu.commonutils.R;
 import com.atguigu.serviceedu.client.VodClient;
 import com.atguigu.serviceedu.entity.EduVideo;
 import com.atguigu.serviceedu.service.EduVideoService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/eduservice/video")
-@CrossOrigin
+//@CrossOrigin
 public class EduVideoController {
     @Autowired
     private EduVideoService eduVideoService;
@@ -36,11 +37,17 @@ public class EduVideoController {
         return R.ok();
     }
 
+    //更新小节
+    @PostMapping("updateVideo")
+    public R updateVideo(@RequestBody EduVideo eduVideo){
+        eduVideoService.updateSpecialColumn(eduVideo);
+        return R.ok();
+    }
+
     //刪除小节
     //删除小节同时把小节中的视频删除
     @DeleteMapping("{id}")
     public R deleteVideo(@PathVariable String id) {
-        System.out.println(id);
         //根据小节id查询出视频id，进行删除
         EduVideo eduVideobyId = eduVideoService.getById(id);
         String videoSourceId = eduVideobyId.getVideoSourceId();
@@ -53,7 +60,11 @@ public class EduVideoController {
         eduVideoService.removeById(id);
         return R.ok();
     }
-
-
+    @GetMapping("/getVideoById/{id}")
+    public R getVideoById(@PathVariable String id){
+        if (StringUtils.isEmpty(id)) return R.ok();
+        EduVideo eduVideo = eduVideoService.getById(id);
+        return R.ok().data("eduVideo",eduVideo);
+    }
 }
 

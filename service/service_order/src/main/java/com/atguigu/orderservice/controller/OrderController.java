@@ -6,6 +6,7 @@ import com.atguigu.commonutils.R;
 import com.atguigu.orderservice.entity.Order;
 import com.atguigu.orderservice.service.OrderService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,8 +21,8 @@ import javax.servlet.http.HttpServletRequest;
  * @since 2020-08-16
  */
 @RestController
-@RequestMapping("/edeorder/order")
-@CrossOrigin
+@RequestMapping("/eduorder/order")
+//@CrossOrigin
 public class OrderController {
 
     @Autowired
@@ -42,16 +43,17 @@ public class OrderController {
         QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("order_no",orderId);
         Order orderInfo = orderService.getOne(queryWrapper);
+//        Order orderInfo=orderService.getOneFromRedis(orderId);
         return R.ok().data("item",orderInfo);
     }
 
     //3.根据课程Id和用户ID查询订单表中的订单状态
-    @GetMapping("isBuyCourse/{courseId}/{memberId}")
-    public boolean isBuyCourse(@PathVariable String courseId,
-                               @PathVariable String memberId){
+    @GetMapping("isBuyCourse/{cmId}")
+    public Boolean isBuyCourse(@PathVariable String cmId){
         QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("course_id",courseId);
-        queryWrapper.eq("member_id",memberId);
+        String[] split = cmId.split("&&");
+        queryWrapper.eq("course_id",split[0]);
+        queryWrapper.eq("member_id",split[1]);
         queryWrapper.eq("status",1);
         int count = orderService.count(queryWrapper);
         if (count>0){
@@ -63,4 +65,3 @@ public class OrderController {
 
 
 }
-

@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/educenter/member")
-@CrossOrigin
+//@CrossOrigin
 public class UcenterMemberController {
 
     @Autowired
@@ -31,42 +31,47 @@ public class UcenterMemberController {
 
     //电话和密码登录
     @PostMapping("login")
-    public R login(@RequestBody UcenterMember ucenterMember){
-        String token =ucenterMemberService.login(ucenterMember);
-        return R.ok().data("token",token);
+    public R login(@RequestBody UcenterMember ucenterMember) {
+        String token = ucenterMemberService.login(ucenterMember);
+        return R.ok().data("token", token);
     }
 
     //电话、密码、验证码、昵称进行注册
     @PostMapping("register")
-    public R register(@RequestBody RegisterVo registerVo){
+    public R register(@RequestBody RegisterVo registerVo) {
         ucenterMemberService.register(registerVo);
         return R.ok();
     }
 
     @GetMapping("getMemberInfo")
-    public R getMemberInfo(HttpServletRequest request){
+    public R getMemberInfo(HttpServletRequest request) {
         //调用jwt工具类，获取头部信息，返回用户id
         String memberId = JwtUtils.getMemberIdByJwtToken(request);
         //查询数据库根据id获得用户信息
         UcenterMember member = ucenterMemberService.getById(memberId);
-        return R.ok().data("userInfo",member);
+        return R.ok().data("userInfo", member);
     }
 
     //根据用户id获取客户信息
     @PostMapping("getUserInfoOrder/{id}")
-    public UcenterMemberOrder getUserInfoOrder(@PathVariable String id){
+    public UcenterMemberOrder getUserInfoOrder(@PathVariable String id) {
         UcenterMember ucenterMember = ucenterMemberService.getById(id);
         //把UcenterMember复制为UcenterMemberOrder对象
         UcenterMemberOrder ucenterMemberOrder = new UcenterMemberOrder();
-        BeanUtils.copyProperties(ucenterMember,ucenterMemberOrder);
+        BeanUtils.copyProperties(ucenterMember, ucenterMemberOrder);
         return ucenterMemberOrder;
     }
 
     @GetMapping("countRegister/{day}")
-    public R countRegister(@PathVariable String day){
-        Integer count = ucenterMemberService.ucenterMemberService(day);
-        return R.ok().data("countRegister",count);
+    public R countRegister(@PathVariable String day) {
+        Integer count = ucenterMemberService.uCenterMemberService(day);
+        return R.ok().data("countRegister", count);
     }
 
+    @GetMapping("countLogin/{day}")
+    public R countLogin(@PathVariable String day) {
+        Integer count = ucenterMemberService.countLoginMembers(day);
+        return R.ok().data("countLogin", count);
+    }
 }
 

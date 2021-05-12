@@ -2,12 +2,15 @@ package com.atguigu.educms.controller;
 
 
 import com.atguigu.commonutils.R;
+import com.atguigu.educms.entity.BannerQuery;
 import com.atguigu.educms.entity.CrmBanner;
 import com.atguigu.educms.service.CrmBannerService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,23 +25,41 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/educms/banneradmin")
-@CrossOrigin
+//@CrossOrigin
 public class BannerAdminController {
     @Autowired
     private CrmBannerService crmBannerService;
-        //分页查询
-    @GetMapping()
-    public R pageBanner(@PathVariable long page,long limit){
-        Page<CrmBanner> bannerPage = new Page<>(page,limit);
-        IPage<CrmBanner> pages = crmBannerService.page(bannerPage, null);
-        List<CrmBanner> records = pages.getRecords();
-        long total = pages.getTotal();
-        return R.ok().data("items",records).data("total",total);
+
+    //分页查询
+    @PostMapping("{page}/{limit}")
+    public R pageBanner(@PathVariable long page, @PathVariable long limit,
+                        @RequestBody(required = false) BannerQuery bannerQuery) {
+        QueryWrapper<CrmBanner> wrapper = new QueryWrapper<>();
+        //多条件组合查询，动态sql
+        String name = bannerQuery.getName();
+        String begin = bannerQuery.getBegin();
+        String end = bannerQuery.getEnd();
+        if (!StringUtils.isEmpty(name)) {
+            wrapper.like("title", name);
+        }
+        if (!StringUtils.isEmpty(begin)) {
+            wrapper.ge("gmt_create", begin);
+        }
+        if (!StringUtils.isEmpty(end)) {
+            wrapper.le("gmt_create", end);
+        }
+        int total = crmBannerService.count(wrapper);
+
+        wrapper.orderByDesc("gmt_create");
+        wrapper.last("limit " + (page-1)*limit + "," + limit);
+        List<CrmBanner> records = crmBannerService.list(wrapper);
+
+        return R.ok().data("items", records).data("total", total);
     }
 
     //添加banner
     @PostMapping("addBanner")
-    public R addBanner(@RequestBody CrmBanner crmBanner){
+    public R addBanner(@RequestBody CrmBanner crmBanner) {
         crmBannerService.save(crmBanner);
         return R.ok();
     }

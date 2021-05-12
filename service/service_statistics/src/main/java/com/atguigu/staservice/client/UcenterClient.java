@@ -11,4 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface UcenterClient {
     @GetMapping("/educenter/member/countRegister/{day}")
     public R countRegister(@PathVariable("day") String day);
+
+    @GetMapping("/educenter/member/countLogin/{day}")
+    public R countLogin(@PathVariable("day") String day);
 }

@@ -7,6 +7,7 @@ import com.atguigu.serviceedu.entity.EduVideo;
 import com.atguigu.serviceedu.mapper.EduVideoMapper;
 import com.atguigu.serviceedu.service.EduVideoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.netflix.client.ClientException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>
@@ -57,6 +60,27 @@ public class EduVideoServiceImpl extends ServiceImpl<EduVideoMapper, EduVideo> i
         QueryWrapper<EduVideo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("course_id", courseId);
         baseMapper.delete(queryWrapper);
+    }
+
+    @Override
+    public void updateSpecialColumn(EduVideo eduVideo) {
+        UpdateWrapper updateWrapper = new UpdateWrapper();
+        if (Objects.nonNull(eduVideo.getTitle())){
+            updateWrapper.set("title",eduVideo.getTitle());
+        }
+        if (Objects.nonNull(eduVideo.getSort())){
+            updateWrapper.set("sort",eduVideo.getSort());
+        }
+        if (Objects.nonNull(eduVideo.getIsFree())){
+            updateWrapper.set("is_free",eduVideo.getIsFree());
+        }
+        if (Objects.nonNull(eduVideo.getVideoSourceId())){
+            updateWrapper.set("video_source_id",eduVideo.getVideoSourceId());
+        }
+        updateWrapper.set("gmt_modified",new Date());
+        updateWrapper.eq("id",eduVideo.getId());
+        updateWrapper.set("version",eduVideo.getVersion()+1);
+        baseMapper.update(eduVideo,updateWrapper);
     }
 
 

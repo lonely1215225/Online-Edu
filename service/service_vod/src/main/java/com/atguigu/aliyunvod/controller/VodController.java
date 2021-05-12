@@ -20,18 +20,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/eduvod/video")
-@CrossOrigin
+//@CrossOrigin
 public class VodController {
     @Autowired
     private VodService vodService;
 
-    @PostMapping("uploadAlyiVideo")
-    public R uploadAlyiVideo(MultipartFile file) {
+    @PostMapping("uploadAliVideo")
+    public R uploadAliVideo(MultipartFile file) {
         String VideoId = vodService.uploadVIdeo(file);
         return R.ok().data("VideoId", VideoId);
     }
 
-    @DeleteMapping("{videoId}")
+    @DeleteMapping("removeAliVideo/{videoId}")
     public R removeVideo(@ApiParam(name = "videoId", value = "云端视频id", required = true)
                          @PathVariable String videoId) {
 
@@ -50,7 +50,7 @@ public class VodController {
     //根据视频id获得视频凭证
     @GetMapping("getPlayAuth/{id}")
     public R getPlayAuth(@PathVariable String id) {
-        System.out.println("11111111111111");
+        System.out.println("播放视频！！！！！！播放视频！！！！！播放视频！！！！！播放视频！！！！！");
         try {
             //创建初始化对象
             DefaultAcsClient client = AliyunVodSDKUtils.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);

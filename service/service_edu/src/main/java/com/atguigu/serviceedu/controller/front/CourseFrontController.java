@@ -11,6 +11,7 @@ import com.atguigu.serviceedu.entity.frontVo.CourseWebVo;
 import com.atguigu.serviceedu.service.EduChapterService;
 import com.atguigu.serviceedu.service.EduCourseService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("eduservice/coursefront")
-@CrossOrigin
+//@CrossOrigin
 public class CourseFrontController {
 
     @Autowired
@@ -33,7 +34,7 @@ public class CourseFrontController {
     @Autowired
     private OrderClient orderClient;
 
-    @PostMapping("getFrontInfo/{page}/{limit}")//@RequestBody(required = false)传入值可以为空
+    @PostMapping("getFrontCourseList/{page}/{limit}")//@RequestBody(required = false)传入值可以为空
     public R getFrontInfo(@PathVariable long page, @PathVariable long limit,
                           @RequestBody(required = false) CourseQueryVo courseQueryVo){
 
@@ -53,8 +54,12 @@ public class CourseFrontController {
 
         //根据课程Id和用户ID查询订单表中是否支付
         String memberId = JwtUtils.getMemberIdByJwtToken(request);//取出用户id
-        boolean buyCourse = orderClient.isBuyCourse(courseId, memberId);
-        return R.ok().data("courseWebVo",courseWebVo).data("chapterVideoList",chapterVoList).data("isBuy",buyCourse);
+        if (StringUtils.isEmpty(memberId)){
+            return R.ok().data("courseWebVo",courseWebVo).data("chapterVideoList",chapterVoList).data("ifLogin",false).data("isBuy",false);
+        }
+        String cmId=courseId+"&&"+memberId;
+        boolean buyCourse = orderClient.isBuyCourse(cmId);
+        return R.ok().data("courseWebVo",courseWebVo).data("chapterVideoList",chapterVoList).data("isBuy",buyCourse).data("ifLogin",true);
     }
 
     //远程调用根据课程id获得课程信息
