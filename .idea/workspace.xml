@@ -14,72 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aae9b4f-c0f4-49f8-80eb-483a4867eca2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_kms_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_vod_2_15_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_3_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentracing_opentracing_api_0_33_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentracing_opentracing_noop_0_33_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opentracing_opentracing_util_0_33_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ini4j_ini4j_0_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jacoco_org_jacoco_agent_runtime_0_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jdom_jdom2_2_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cms/src/main/java/com/atguigu/educms/entity/BannerQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_msm/src/main/java/com/atguigu/msmservice/utils/HttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_vod_2_15_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_4_5_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/api_gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/api_gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_acl/src/main/java/com/atguigu/aclservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_acl/src/main/java/com/atguigu/aclservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_acl/src/main/java/com/atguigu/aclservice/service/impl/IndexServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_acl/src/main/java/com/atguigu/aclservice/service/impl/IndexServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_acl/src/main/java/com/atguigu/aclservice/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_acl/src/main/java/com/atguigu/aclservice/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_acl/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_acl/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_cms/src/main/java/com/atguigu/educms/controller/BannerAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_cms/src/main/java/com/atguigu/educms/controller/BannerAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_cms/src/main/java/com/atguigu/educms/controller/BannerFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_cms/src/main/java/com/atguigu/educms/controller/BannerFrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_cms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_cms/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/client/OrderClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduChapterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduCourseDescriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduCourseDescriptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduSubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduTeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduTeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduVideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/EduVideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/front/CourseFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/front/CourseFrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/front/EduIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/front/EduIndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/front/TeacherFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/controller/front/TeacherFrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/service/EduVideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/service/EduVideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/service/impl/EduVideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/java/com/atguigu/serviceedu/service/impl/EduVideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_edu/src/test/java/com/atguigu/eduservice/excel/DemoData.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_edu/src/test/java/com/atguigu/eduservice/excel/DemoData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_msm/src/main/java/com/atguigu/msmservice/controller/MsmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_msm/src/main/java/com/atguigu/msmservice/controller/MsmController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service_msm/src/main/java/com/atguigu/msmservice/service/impl/MsmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_msm/src/main/java/com/atguigu/msmservice/service/impl/MsmServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_msm/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_msm/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/controller/PayLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/controller/PayLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/service/impl/PayLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_order/src/main/java/com/atguigu/orderservice/service/impl/PayLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_oss/src/main/java/com/atguigu/oss/controller/OssController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_oss/src/main/java/com/atguigu/oss/controller/OssController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_oss/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_oss/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/client/UcenterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/client/UcenterClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/controller/StatisticsDailyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/controller/StatisticsDailyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/schedule/ScheduleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/schedule/ScheduleTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/service/StatisticsDailyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/service/StatisticsDailyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/service/impl/StatisticsDailyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/java/com/atguigu/staservice/service/impl/StatisticsDailyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_statistics/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_statistics/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/controller/UcenterMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/controller/UcenterMemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/controller/WxApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/controller/WxApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/mapper/UcenterMemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/mapper/UcenterMemberMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/mapper/xml/UcenterMemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/mapper/xml/UcenterMemberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/service/UcenterMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/service/UcenterMemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/service/impl/UcenterMemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/java/com/atguigu/educenter/service/impl/UcenterMemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_ucenter/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_ucenter/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_vod/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_vod/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_vod/service_vod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_vod/service_vod.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_vod/src/main/java/com/atguigu/aliyunvod/controller/VodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_vod/src/main/java/com/atguigu/aliyunvod/controller/VodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_vod/src/main/java/com/atguigu/aliyunvod/service/impl/VodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_vod/src/main/java/com/atguigu/aliyunvod/service/impl/VodServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service_vod/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_vod/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_vod/src/test/java/com/atguigu/vodTest/Testvod.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_vod/src/test/java/com/atguigu/vodTest/Testvod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,8 +69,13 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="taichiaman" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -550,7 +491,7 @@
       <workItem from="1620615872754" duration="12970000" />
       <workItem from="1620655974350" duration="10100000" />
       <workItem from="1620697647618" duration="11408000" />
-      <workItem from="1620720046470" duration="460000" />
+      <workItem from="1620720046470" duration="841000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1597929729238</created>
@@ -587,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619596521749</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="真人在线教育功能完善">
+      <created>1620779194972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620779194972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -753,7 +701,8 @@
     </ignored-roots>
     <MESSAGE value="首次提交" />
     <MESSAGE value="完善接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善接口" />
+    <MESSAGE value="真人在线教育功能完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="真人在线教育功能完善" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
